@@ -13,11 +13,19 @@ public class Rectangle {
  
     // a method (object behavior) that calculates and prints area:
     public void printArea() {
-        int area = length * width;
-        System.out.println("My area is " + area);
+        System.out.println("My area is " + calculateArea());
     }
     public void printPerimeter() {
         int perimeter = (length + width) * 2;
         System.out.println("My perimeter is " + perimeter);
+    }
+    public void printBoxVolume(double height) {
+        System.out.println(calculateBoxVolume(height));
+    }
+    public int calculateArea(){
+        return length * width;
+    }
+    public double calculateBoxVolume(double height){
+        return calculateArea() * height;
     }
 }
